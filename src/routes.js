@@ -9,7 +9,7 @@ const Routes = (props) => {
        <Layout>
            <Switch>
                 <Route exact component={Home} path="/" />
-           </Switch>
+           </Switch>    
        </Layout> 
     )
 }
