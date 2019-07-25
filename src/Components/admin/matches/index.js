@@ -18,7 +18,7 @@ class AdminMatches extends Component {
     state = {
         isLoading: true,
         matches:[]
-    }
+    }   
 
     componentDidMount(){
             firebaseMatches.once('value').then(snapshot=>{
