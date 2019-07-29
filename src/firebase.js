@@ -1,14 +1,15 @@
-import firebase from 'firebase/app';
-import 'firebase/app';
-import 'firebase/database';
-import 'firebase/auth';
+import firebase from 'firebase/app'
+import 'firebase/app'
+import 'firebase/database'
+import 'firebase/auth'
+import 'firebase/storage'
 
 const config = {
     apiKey: "AIzaSyCr3sU425uF2tj8F3tEmc_ZhVXjYvdOap0",
     authDomain: "sport-team-cms.firebaseapp.com",
     databaseURL: "https://sport-team-cms.firebaseio.com",
     projectId: "sport-team-cms",
-    storageBucket: "",
+    storageBucket: "gs://sport-team-cms.appspot.com/",
     messagingSenderId: "454564747465",
     appId: "1:454564747465:web:612a4d69e8e6f48b"
   };
