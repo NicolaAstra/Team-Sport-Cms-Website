@@ -17,7 +17,7 @@ class Fileuploader extends Component {
         })
     }
 
-    handleUploadStart = () => {
+    handleUploadError  = () => {
         this.setState({
             isUploading:false
         })
@@ -35,6 +35,8 @@ class Fileuploader extends Component {
 
             this.setState({fileURL: url})
         })
+
+        this.props.filename(filename)
     }
 
     static getDrivedStateFromProps(props, state){
@@ -46,6 +48,15 @@ class Fileuploader extends Component {
         }
 
         return null
+    }
+
+    uploadAgain = () => {
+        this.setState({
+            name:'',
+            isUploading:false,
+            fileURL:''
+        });
+        this.props.resetImage();
     }
 
     render() {
