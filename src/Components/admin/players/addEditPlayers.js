@@ -151,6 +151,10 @@ class AddEditPlayers extends Component {
             } else {
                 firebasePlayers.push(dataToSubmit).then(()=>{
                     this.props.history.push('/admin_players')
+                }).catch(e=>{
+                    this.setState({
+                      formError: true
+                    })
                 })
             }
         } else {
