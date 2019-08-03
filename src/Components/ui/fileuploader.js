@@ -45,7 +45,7 @@ class Fileuploader extends Component {
                 name:props.defaultImgName,
                 fileURL:props.defaultImg
             }
-        }
+        }   
 
         return null
     }
