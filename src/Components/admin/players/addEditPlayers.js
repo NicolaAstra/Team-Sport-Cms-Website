@@ -236,11 +236,11 @@ class AddEditPlayers extends Component {
         <div className="editplayers_dialog_wrapper">
           <h2>{this.state.formType}</h2>
           <div>
-            <form onSubmit={event => this.submitForm(event)}>
+            <form onSubmit={(event) => this.submitForm(event)}>
 
                 <Fileuploader
                     dir='players'
-                    tag={"Player Image"}
+                    tag={"Player image"}
                     defaultImg={this.state.defaultImg}
                     defaultImgName={this.state.formdata.image.value}
                     resetImage={()=> this.resetImage()}
@@ -252,35 +252,35 @@ class AddEditPlayers extends Component {
               <FormField
                 id={"name"}
                 formdata={this.state.formdata.name}
-                change={element => this.updateForm(element)}
+                change={(element) => this.updateForm(element)}
               />
 
               <FormField
                 id={"lastname"}
                 formdata={this.state.formdata.lastname}
-                change={element => this.updateForm(element)}
+                change={(element) => this.updateForm(element)}
               />
 
               <FormField
                 id={"number"}
                 formdata={this.state.formdata.number}
-                change={element => this.updateForm(element)}
+                change={(element) => this.updateForm(element)}
               />
 
               <FormField
                 id={"position"}
                 formdata={this.state.formdata.position}
-                change={element => this.updateForm(element)}
+                change={(element) => this.updateForm(element)}
               />
 
               <div className="success_label">{this.state.formSuccess}</div>
               {this.state.formError ? (
                 <div className="error_label">Something is wrong</div>
-              ) : (
-                ""
-              )}
+              ) : 
+                ''
+              }
               <div className="admin_submit">
-                <button onClick={event => this.submitForm(event)}>
+                <button onClick={(event) => this.submitForm(event)}>
                   {this.state.formType}
                 </button>
               </div>
