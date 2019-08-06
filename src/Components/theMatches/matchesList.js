@@ -54,7 +54,28 @@ class MatchesList extends Component {
                                     transform: `translate(${x}px)`
                                 }}
                             >
-                                The Match
+                                        <div className="block_wraper">
+                                            <div className="block">
+                                                <div 
+                                                    className="icon"
+                                                    style={{background:`url(/images/team_icons/${data.localThmb}.png)`}}></div>
+                                                 <div className="team">{data.local}</div>
+                                                 <div className="team">{data.resultLocal}</div>
+                                            </div>
+                                            <div className="block">
+                                                <div 
+                                                    className="icon"
+                                                    style={{background:`url(/images/team_icons/${data.awayThmb}.png)`}}></div>
+                                                 <div className="team">{data.away}</div>
+                                                 <div className="team">{data.resultAway}</div>
+                                            </div>
+                                        </div>
+                                    <div className="block_wraper nfo">
+                                        <div><strong>Date:</strong> {data.date}</div>
+                                        <div><strong>Stadium:</strong> {data.stadium}</div>
+                                        <div><strong>Referee:</strong> {data.referee}</div>
+                                    </div>
+                                    
                             </div>
                     
                         ))}
